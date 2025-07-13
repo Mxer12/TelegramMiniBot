@@ -1,6 +1,6 @@
 const { Telegraf, Markup } = require('telegraf');
 
-const bot = new Telegraf('YOUR_BOT_TOKEN');
+const bot = new Telegraf('8072440393:AAHJloXf5KWoL5sZXLbcIpwmB2Da_xaEUuU');
 
 bot.start((ctx) => {
     const button = Markup.button.webApp(
