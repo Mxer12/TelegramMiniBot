@@ -1,19 +1,21 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #030303;
+    margin: 0;
+    padding: 0;
+    background-color: #000; // Черный фон
+    height: 100vh; // На всю высоту экрана
+    display: flex;
+    justify-content: center; // Центрирование по горизонтали
 }
 
-h1 {
-  color: #ffffff;
-  text-align: center;
+.photo-container {
+    margin-top: 50px; // Отступ сверху (можно регулировать)
+    
+    .profile-photo {
+        width: 200px; // Размер фотографии
+        height: 200px;
+        border-radius: 50%; // Круглая фотография (опционально)
+        object-fit: cover; // Чтобы фотография сохраняла пропорции
+        border: 3px solid #fff; // Белая рамка (опционально)
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); // Эффект свечения (опционально)
+    }
 }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-
