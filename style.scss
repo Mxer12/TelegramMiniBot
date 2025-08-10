@@ -1,21 +1,52 @@
-body {
+/* Базовые настройки для адаптивности */
+* {
+    box-sizing: border-box; // Учитываем padding и border в ширине
     margin: 0;
     padding: 0;
-    background-color: #000; // Черный фон
-    height: 100vh; // На всю высоту экрана
+}
+
+html, body {
+    width: 100%; // Занимаем всю ширину
+    min-height: 100vh; // Минимальная высота - весь экран
+    overflow-x: hidden; // Запрещаем горизонтальный скролл
+}
+
+body {
+    background-color: #000;
     display: flex;
-    justify-content: center; // Центрирование по горизонтали
+    flex-direction: column; // Вертикальное расположение
+    align-items: center; // Центрирование по горизонтали
+    justify-content: flex-start; // Контент начинается сверху
+    padding: 20px; // Отступы от краев экрана
 }
 
 .photo-container {
-    margin-top: 50px; // Отступ сверху (можно регулировать)
+    margin-top: 5vh; // Отступ сверху в % от высоты экрана
+    width: 100%;
+    max-width: 800px; // Максимальная ширина контейнера
+    display: flex;
+    justify-content: center;
     
     .profile-photo {
-        width: 200px; // Размер фотографии
-        height: 200px;
-        border-radius: 50%; // Круглая фотография (опционально)
-        object-fit: cover; // Чтобы фотография сохраняла пропорции
-        border: 3px solid #fff; // Белая рамка (опционально)
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); // Эффект свечения (опционально)
+        width: 30vmin; /* Размер зависит от меньшей стороны экрана */
+        height: 30vmin;
+        min-width: 150px; /* Минимальный размер */
+        min-height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #fff;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .photo-container {
+        margin-top: 3vh;
+        
+        .profile-photo {
+            width: 50vmin;
+            height: 50vmin;
+        }
     }
 }
