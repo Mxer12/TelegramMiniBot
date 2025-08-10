@@ -28,10 +28,9 @@ body {
     justify-content: center;
     
     .profile-photo {
-        width: 30vmin; /* Размер зависит от меньшей стороны экрана */
-        height: 30vmin;
-        min-width: 150px; /* Минимальный размер */
-        min-height: 150px;
+       width: 200px;
+       height: 200px;
+       transform: scale(0.7); /* Уменьшает изображение до 70% */
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid #fff;
