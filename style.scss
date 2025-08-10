@@ -28,8 +28,8 @@ body {
     justify-content: center;
     
     .profile-photo {
-       width: 200px;
-       height: 200px;
+       width: 50%;
+       height: 50%;
        transform: scale(0.7); /* Уменьшает изображение до 70% */
         border-radius: 50%;
         object-fit: cover;
