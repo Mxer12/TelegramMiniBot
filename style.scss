@@ -1,49 +1,48 @@
-/* Базовые настройки для адаптивности */
-* {
-    box-sizing: border-box; // Учитываем padding и border в ширине
-    margin: 0;
-    padding: 0;
+.telegram-photo {
+  width: 100%;
+  max-width: 512px; /* Оптимальный максимум для Telegram */
+  height: auto;
+  object-fit: cover; /* Сохраняет пропорции и обрезает если нужно */
+  border-radius: 10px;
+  background-color: var(--tg-theme-bg-color, #ffffff); /* Используем тему Telegram */
 }
 
-html, body {
-    width: 100%; // Занимаем всю ширину
-    min-height: 100vh; // Минимальная высота - весь экран
-    overflow-x: hidden; // Запрещаем горизонтальный скролл
+/* Для квадратных изображений */
+.square-photo {
+  width: 100%;
+  aspect-ratio: 1/1; /* Сохраняет квадратную форму */
+  object-fit: cover;
 }
-
-body {
-    background-color: #000;
-    display: flex;
-    flex-direction: column; // Вертикальное расположение
-    align-items: center; // Центрирование по горизонтали
-    justify-content: flex-start; // Контент начинается сверху
-    padding: 20px; // Отступы от краев экрана
-}
-
 .photo-container {
-    width: 100%;
-    max-width: 80px; // Максимальная ширина контейнера
-    display: flex;
-    justify-content: center;
-    
-    .profile-photo {
-       width: 10px;
-       height: 10px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid #fff;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-    }
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* Опционально: скругление углов */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Опционально: тень */
+}
+@media (max-width: 600px) {
+  .telegram-photo {
+    max-width: 100%;
+    border-radius: 8px;
+  }
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .photo-container {
-        margin-top: 3vh;
-        
-        .profile-photo {
-            width: 50vmin;
-            height: 50vmin;
-        }
-    }
+@media (min-width: 601px) {
+  .telegram-photo {
+    max-width: 512px;
+  }
+}
+.photo-container {
+  background-color: var(--tg-theme-secondary-bg-color, #f4f4f5);
+  padding: 8px;
+  border-radius: 12px;
+  margin: 8px 0;
+}
+
+.photo-caption {
+  color: var(--tg-theme-text-color, #000000);
+  font-size: 14px;
+  margin-top: 8px;
+  padding: 0 8px;
 }
