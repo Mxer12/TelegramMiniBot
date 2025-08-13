@@ -1,15 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя страница</title>
+    <title>Каталог товаров</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="photo-container">
-        <img src="3b499b0a-3eb0-42a7-8831-2879c18060b9.jpg" alt="Описание фото" class="telegram-photo">
-    <div class="photo-caption">Подпись к фотографии</div>
-</div>
+    <header>
+        <h1>Магазин электроники</h1>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="products-container">
+            <!-- Карточка товара 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300x200?text=Смартфон" alt="Смартфон">
+                </div>
+                <div class="product-info">
+                    <h3>Смартфон X Pro</h3>
+                    <p class="product-description">Мощный смартфон с тройной камерой и AMOLED-экраном</p>
+                    <div class="product-price">29 999 ₽</div>
+                    <button class="buy-button">Купить</button>
+                </div>
+            </div>
+
+            <!-- Карточка товара 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300x200?text=Ноутбук" alt="Ноутбук">
+                </div>
+                <div class="product-info">
+                    <h3>Ноутбук UltraBook</h3>
+                    <p class="product-description">Легкий и мощный ноутбук с SSD накопителем</p>
+                    <div class="product-price">54 999 ₽</div>
+                    <button class="buy-button">Купить</button>
+                </div>
+            </div>
+
+            <!-- Карточка товара 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300x200?text=Наушники" alt="Наушники">
+                </div>
+                <div class="product-info">
+                    <h3>Беспроводные наушники</h3>
+                    <p class="product-description">Наушники с шумоподавлением и 30-часовой работой</p>
+                    <div class="product-price">8 499 ₽</div>
+                    <button class="buy-button">Купить</button>
+                </div>
+            </div>
+
+            <!-- Карточка товара 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300x200?text=Планшет" alt="Планшет">
+                </div>
+                <div class="product-info">
+                    <h3>Планшет Mini</h3>
+                    <p class="product-description">Компактный планшет с высоким разрешением экрана</p>
+                    <div class="product-price">22 799 ₽</div>
+                    <button class="buy-button">Купить</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 Магазин электроники. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
