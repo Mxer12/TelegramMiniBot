@@ -6,38 +6,36 @@
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Базовый стиль на случай если CSS не загрузится */
-        body { background: #000; color: #fff; }
-        .product-card { background: #222; }
-    </style>
 </head>
 <body>
-    <!-- Остальное содержимое без изменений -->
     <header>
-        <h1>Магазин электроники</h1>
-        <div class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">0</span>
+        <div class="header-content">
+            <h1>Магазин электроники</h1>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="products-container">
-            <!-- Карточки товаров (без изменений) -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://avatars.mds.yandex.net/i?id=2a0000019898d02f45fec31d5af577058624-1593212-fast-images&n=13" alt="Смартфон">
+        <div class="products-wrapper">
+            <div class="products-container">
+                <!-- Карточка товара 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=2a0000019898d02f45fec31d5af577058624-1593212-fast-images&n=13" alt="Смартфон">
+                    </div>
+                    <div class="product-info">
+                        <h3>Смартфон X Pro</h3>
+                        <p class="product-description">Мощный смартфон с тройной камерой и AMOLED-экраном</p>
+                        <div class="product-price">29 999 ₽</div>
+                        <button class="buy-button">Купить</button>
+                    </div>
                 </div>
-                <div class="product-info">
-                    <h3>Смартфон X Pro</h3>
-                    <p class="product-description">Мощный смартфон с тройной камерой и AMOLED-экраном</p>
-                    <div class="product-price">29 999 ₽</div>
-                    <button class="buy-button">Купить</button>
-                </div>
-            </div>
 
-            <!-- Остальные карточки -->
+                <!-- Остальные карточки товаров -->
+            </div>
         </div>
     </main>
 
