@@ -1,64 +1,51 @@
-/* Основные стили для WebApp */
-html, body {
-    width: 100%;
-    height: 100%;
+/* Основные стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #000;
     color: #fff;
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
-    touch-action: manipulation;
-}
-
-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    box-sizing: border-box;
 }
 
 header {
     background-color: #111;
     color: white;
-    padding: 12px;
+    padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
 main {
     flex: 1;
-    padding: 12px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 1rem;
 }
 
 .products-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 1rem;
 }
 
 .product-card {
     background: #222;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s;
-    width: 100%;
-    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
 .product-image {
-    height: 120px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,28 +59,52 @@ main {
 }
 
 .product-info {
-    padding: 10px;
+    padding: 1rem;
     text-align: center;
 }
 
 .product-info h3 {
-    margin: 0 0 4px 0;
-    font-size: 14px;
-    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
 }
 
 .product-description {
     margin: 0;
     color: #aaa;
-    font-size: 12px;
-    line-height: 1.3;
+    font-size: 0.9rem;
 }
 
 footer {
     width: 100%;
     text-align: center;
-    padding: 12px;
+    padding: 1rem;
     background-color: #111;
-    font-size: 12px;
+    margin-top: auto;
 }
 
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .products-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .product-image {
+        height: 180px;
+    }
+}
