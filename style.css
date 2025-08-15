@@ -82,7 +82,7 @@ main {
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    border-radius: 50%; /* Закругление углов */
+    border-radius: 50px; /* Закругление углов */
 }
 footer {
     width: 100%;
@@ -121,9 +121,10 @@ footer {
 @media (max-width: 480px) {
     .logo {
         height: 130px; /* Уменьшенный, но все равно увеличенный размер для мобильных */
-        border-radius: 50%;
+        border-radius: 50px;
     }
 }
+
 
 
 
