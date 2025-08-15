@@ -47,12 +47,6 @@ main {
     background: #333;
 }
 
-.product-image img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-}
-
 /* Добавляем новые стили для центрирования всего текста */
 .product-info, 
 .product-info h3, 
@@ -70,6 +64,7 @@ footer {
     padding: 1rem;
     background-color: #111;
 }
+
 
 
 
