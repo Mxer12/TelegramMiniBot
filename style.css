@@ -39,11 +39,6 @@ main {
     margin: 0 auto;
     justify-items: center;
 }
-
-.cart-icon {
-    text-alight: center
-
-}
 .product-card {
     background-color: #222;
     color: #fff;
@@ -93,6 +88,7 @@ footer {
     padding: 1rem;
     background-color: #111;
 }
+
 
 
 
