@@ -12,12 +12,13 @@ body {
 
 header {
     background-color: #111;
-    padding: 1rem;
+    padding: 1.5rem; /* Увеличено */
     text-align: center;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80px; /* Гарантирует минимальную высоту */
 }
 
 main {
@@ -77,11 +78,11 @@ main {
 }
 
 .logo {
-    height: 10px; /* Регулируйте по необходимости */
+    height: 60px; /* Увеличьте это значение */
     width: auto;
     max-width: 100%;
+    object-fit: contain;
 }
-
 footer {
     width: 100%;
     text-align: center;
@@ -118,9 +119,10 @@ footer {
 }
 @media (max-width: 480px) {
     .logo {
-        height: 30px; /* Меньший размер для мобильных */
+        height: 50px; /* Уменьшенный, но все равно увеличенный размер для мобильных */
     }
 }
+
 
 
 
