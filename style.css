@@ -78,11 +78,11 @@ main {
 }
 
 .logo {
-    height: 60px;
+    height: 100px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    border-radius: 12px; /* Закругление углов */
+    border-radius: 30px; /* Закругление углов */
 }
 footer {
     width: 100%;
@@ -123,6 +123,7 @@ footer {
         height: 130px; /* Уменьшенный, но все равно увеличенный размер для мобильных */
     }
 }
+
 
 
 
