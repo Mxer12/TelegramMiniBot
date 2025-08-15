@@ -1,44 +1,49 @@
+/* Основные стили */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000 !important;
-    color: #fff !important;
+    background-color: #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    text-align: center;
 }
 
 header {
     background-color: #111;
     color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+    padding: 1rem;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
 }
 
 main {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .products-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    justify-items: center;
+    padding: 1rem;
 }
+
+.product-card {
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
 .product-image {
     height: 200px;
     display: flex;
@@ -52,24 +57,57 @@ main {
     max-height: 90%;
     object-fit: contain;
 }
-/* Добавляем новые стили для центрирования всего текста */
-.product-info, 
-.product-info h3, 
-.product-info p, 
-.product-info div, 
-footer, 
-footer p {
+
+.product-info {
+    padding: 1rem;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
+
+.product-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.product-description {
+    margin: 0;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
 footer {
     width: 100%;
     text-align: center;
     padding: 1rem;
     background-color: #111;
+    margin-top: auto;
 }
 
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .products-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .product-image {
+        height: 180px;
+    }
+}
 
 
 
