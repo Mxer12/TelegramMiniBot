@@ -124,6 +124,46 @@ footer {
         border-radius: 50px;
     }
 }
+.details-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.details-btn:hover {
+    background-color: #555;
+}
+
+.additional-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1rem;
+    background-color: #333;
+    color: #ddd;
+    border-radius: 0 0 8px 8px;
+}
+
+.additional-info.show {
+    max-height: 300px;
+    padding: 1rem;
+}
+
+.additional-info p {
+    margin: 0;
+    line-height: 1.5;
+}
+
 
 
 
