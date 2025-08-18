@@ -1,4 +1,3 @@
-/* Основные стили */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -12,13 +11,13 @@ body {
 
 header {
     background-color: #111;
-    padding: 1.5rem; /* Увеличено */
+    padding: 1.5rem;
     text-align: center;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80px; /* Гарантирует минимальную высоту */
+    min-height: 80px;
 }
 
 main {
@@ -82,8 +81,9 @@ main {
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    border-radius: 50px; /* Закругление углов */
+    border-radius: 50px;
 }
+
 footer {
     width: 100%;
     text-align: center;
@@ -92,38 +92,6 @@ footer {
     margin-top: auto;
 }
 
-/* Адаптивные стили */
-@media (max-width: 768px) {
-    .products-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1rem;
-    }
-    
-    .product-image {
-        height: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
-    .products-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .product-image {
-        height: 180px;
-    }
-}
-@media (max-width: 480px) {
-    .logo {
-        height: 130px; /* Уменьшенный, но все равно увеличенный размер для мобильных */
-        border-radius: 50px;
-    }
-}
 .details-btn {
     background-color: #444;
     color: white;
@@ -164,15 +132,33 @@ footer {
     line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .products-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .product-image {
+        height: 180px;
+    }
+    
+    .logo {
+        height: 130px;
+        border-radius: 50px;
+    }
+}
