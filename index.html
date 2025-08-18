@@ -22,6 +22,10 @@
                 <div class="product-info">
                     <h3>Shmooter</h3>
                     <p class="product-description">Мультяшная стрелялка друг против друга</p>
+                    <button class="details-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="additional-info">
+                    <p>Shmooter - это веселая мультяшная стрелялка, где вы можете сражаться с друзьями на различных аренах. Игра поддерживает до 4 игроков одновременно и предлагает множество видов оружия и бонусов.</p>
                 </div>
             </div>
             
@@ -33,6 +37,10 @@
                 <div class="product-info">
                     <h3>Pixel Adventure</h3>
                     <p class="product-description">Платформер в ретро-стиле с захватывающим сюжетом</p>
+                    <button class="details-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="additional-info">
+                    <p>Pixel Adventure переносит вас в мир 8-битной графики с классическим геймплеем платформера. Пройдите через 50 уровней, сразитесь с боссами и раскройте тайну древнего артефакта.</p>
                 </div>
             </div>
             
@@ -44,6 +52,10 @@
                 <div class="product-info">
                     <h3>Racing Extreme</h3>
                     <p class="product-description">Реалистичные гонки с множеством трасс</p>
+                    <button class="details-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="additional-info">
+                    <p>Racing Extreme предлагает более 30 лицензированных автомобилей и 20 трасс по всему миру. Реалистичная физика, динамическая погода и многопользовательские гонки до 16 игроков.</p>
                 </div>
             </div>
             
@@ -55,6 +67,10 @@
                 <div class="product-info">
                     <h3>Fantasy Quest</h3>
                     <p class="product-description">РПГ в мире магии и древних легенд</p>
+                    <button class="details-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="additional-info">
+                    <p>Fantasy Quest - это масштабная RPG с открытым миром, где вы создадите своего героя и отправитесь в эпическое путешествие. Выберите из 5 рас и 10 классов, исследуйте огромный мир и принимайте решения, которые влияют на сюжет.</p>
                 </div>
             </div>
         </div>
@@ -63,6 +79,28 @@
     <footer>
         <p>© Play Topia. Все права защищены.</p>
     </footer>
+<script>
+        document.querySelectorAll('.details-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.product-card');
+                const additionalInfo = card.querySelector('.additional-info');
+                const icon = this.querySelector('i');
+                
+                additionalInfo.classList.toggle('show');
+                
+                if (additionalInfo.classList.contains('show')) {
+                    this.textContent = 'Свернуть ';
+                    icon.className = 'fas fa-chevron-up';
+                } else {
+                    this.textContent = 'Подробнее ';
+                    icon.className = 'fas fa-chevron-down';
+                }
+                
+                // Вставляем иконку обратно
+                this.appendChild(icon);
+            });
+        });
+    </script>
 </body>
 </html>
 
